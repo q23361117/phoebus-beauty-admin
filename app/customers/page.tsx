@@ -106,7 +106,7 @@ export default function CustomersPage() {
       <div className="phoebis-main flex min-h-screen">
         <AdminSidebar />
 
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-4 pt-24 pb-28 md:p-6">
           <h1 className="text-3xl font-bold text-white">客戶管理</h1>
           <p className="mt-2 text-slate-400">建立與管理美容客戶資料</p>
 
