@@ -44,3 +44,33 @@ export type Appointment = {
   createdAt?: any;
   updatedAt?: any;
 };
+
+export type CoursePackageStatus = "active" | "completed" | "cancelled";
+
+export type CoursePackage = {
+  id: string;
+  customerName: string;
+  customerPhone?: string;
+  courseName: string;
+  totalSessions: number;
+  usedSessions: number;
+  remainingSessions: number;
+  purchaseAmount: number;
+  purchaseDate: string;
+  status: CoursePackageStatus;
+  notes?: string;
+  createdAt?: any;
+  updatedAt?: any;
+};
+
+export type CourseUsageRecord = {
+  id: string;
+  packageId: string;
+  customerName: string;
+  courseName: string;
+  usedCount: number;
+  usedDate: string;
+  staffName?: string;
+  notes?: string;
+  createdAt?: any;
+};

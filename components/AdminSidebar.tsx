@@ -10,8 +10,9 @@ const items = [
   { href: "/customers", label: "客戶" },
   { href: "/services", label: "服務" },
   { href: "/appointments", label: "預約" },
+  { href: "/reminders", label: "提醒" },
+  { href: "/course-packages", label: "課程" },
 ];
-
 export default function AdminSidebar() {
   const pathname = usePathname();
   const router = useRouter();
