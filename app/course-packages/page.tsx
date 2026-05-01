@@ -221,7 +221,7 @@ export default function CoursePackagesPage() {
       <div className="phoebis-main flex min-h-screen">
         <AdminSidebar />
 
-        <main className="flex-1 p-4 pt-24 pb-28 md:p-6">
+        <main className="flex-1 p-4 pt-24 pb-8 md:p-6">
           <h1 className="text-3xl font-bold text-white">課程堂數</h1>
           <p className="mt-2 text-slate-400">管理客戶購買課程、剩餘堂數與每次使用紀錄</p>
 

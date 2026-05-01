@@ -257,7 +257,7 @@ export default function RemindersPage() {
       <div className="phoebis-main flex min-h-screen">
         <AdminSidebar />
 
-        <main className="flex-1 p-4 pt-24 pb-28 md:p-6">
+        <main className="flex-1 p-4 pt-24 pb-8 md:p-6">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div>
               <h1 className="text-3xl font-bold text-white">預約提醒</h1>
