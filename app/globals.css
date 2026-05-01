@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #000;
+  color: white;
+}
+
+.phoebis-bg {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.78)),
+    url("/brand/phoebis-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.phoebis-panel {
+  background: rgba(10, 12, 24, 0.82);
+  border: 1px solid rgba(255, 215, 160, 0.18);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.phoebis-sidebar {
+  background: rgba(0, 0, 0, 0.82);
+  border-right: 1px solid rgba(255, 215, 160, 0.14);
+  backdrop-filter: blur(10px);
+}
+
+.phoebis-main {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(8, 8, 12, 0.78)),
+    url("/brand/phoebis-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
