@@ -34,9 +34,11 @@ export default function AdminSidebar() {
     <>
       {/* 電腦版左側選單 */}
       <aside className="phoebis-sidebar hidden min-h-screen w-64 flex-col md:flex">
-        <div className="border-b border-white/10 px-5 py-6">
-          <h1 className="text-xl font-bold text-white">菲比斯美業後台</h1>
-          <p className="mt-1 text-sm text-pink-200/70">
+        <div className="border-b border-pink-100 px-5 py-6">
+          <h1 className="text-xl font-bold text-slate-900">
+            菲比斯美業後台
+          </h1>
+          <p className="mt-1 text-sm text-pink-500">
             Phoebus Beauty Admin
           </p>
         </div>
@@ -52,8 +54,8 @@ export default function AdminSidebar() {
                 className={[
                   "rounded-xl px-4 py-3 text-sm font-medium transition",
                   active
-                    ? "bg-pink-500 text-white"
-                    : "text-slate-300 hover:bg-white/10 hover:text-white",
+                    ? "bg-pink-500 text-white shadow-md"
+                    : "text-slate-600 hover:bg-pink-50 hover:text-pink-600",
                 ].join(" ")}
               >
                 {item.label}
@@ -62,10 +64,10 @@ export default function AdminSidebar() {
           })}
         </nav>
 
-        <div className="border-t border-white/10 p-4">
+        <div className="border-t border-pink-100 p-4">
           <button
             onClick={handleLogout}
-            className="w-full rounded-xl bg-white/10 px-4 py-3 text-sm font-medium text-white hover:bg-white/20"
+            className="w-full rounded-xl border border-pink-200 bg-white px-4 py-3 text-sm font-medium text-pink-600 shadow-sm hover:bg-pink-50"
           >
             登出
           </button>
@@ -73,17 +75,21 @@ export default function AdminSidebar() {
       </aside>
 
       {/* 手機版頂部列 */}
-      <div className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/90 px-4 py-3 backdrop-blur md:hidden">
+      <div className="fixed left-0 right-0 top-0 z-50 border-b border-pink-100 bg-white/95 px-4 py-3 shadow-sm backdrop-blur md:hidden">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-base font-bold text-white">菲比斯美業後台</h1>
-            <p className="text-xs text-pink-200/70">Phoebus Beauty Admin</p>
+            <h1 className="text-base font-bold text-slate-900">
+              菲比斯美業後台
+            </h1>
+            <p className="text-xs text-pink-500">
+              Phoebus Beauty Admin
+            </p>
           </div>
 
           <button
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="rounded-xl border border-white/10 bg-white/10 px-4 py-2 text-sm font-bold text-white"
+            className="rounded-xl border border-pink-200 bg-pink-500 px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-pink-600"
           >
             {mobileMenuOpen ? "關閉" : "選單"}
           </button>
@@ -92,7 +98,7 @@ export default function AdminSidebar() {
 
       {/* 手機版選單遮罩 */}
       {mobileMenuOpen ? (
-        <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden">
+        <div className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm md:hidden">
           <button
             type="button"
             aria-label="關閉選單"
@@ -104,10 +110,10 @@ export default function AdminSidebar() {
 
       {/* 手機版右上展開選單 */}
       {mobileMenuOpen ? (
-        <div className="fixed right-4 top-20 z-50 w-[calc(100%-2rem)] max-w-sm rounded-3xl border border-white/10 bg-slate-950/95 p-4 shadow-2xl backdrop-blur md:hidden">
-          <div className="mb-3 border-b border-white/10 pb-3">
-            <p className="text-sm font-bold text-white">功能選單</p>
-            <p className="mt-1 text-xs text-slate-400">
+        <div className="fixed right-4 top-20 z-50 w-[calc(100%-2rem)] max-w-sm rounded-3xl border border-pink-100 bg-white/95 p-4 shadow-2xl backdrop-blur md:hidden">
+          <div className="mb-3 border-b border-pink-100 pb-3">
+            <p className="text-sm font-bold text-slate-900">功能選單</p>
+            <p className="mt-1 text-xs text-slate-500">
               選擇要前往的後台功能
             </p>
           </div>
@@ -124,8 +130,8 @@ export default function AdminSidebar() {
                   className={[
                     "rounded-2xl px-4 py-3 text-sm font-medium transition",
                     active
-                      ? "bg-pink-500 text-white"
-                      : "bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white",
+                      ? "bg-pink-500 text-white shadow-md"
+                      : "bg-pink-50 text-slate-700 hover:bg-pink-100 hover:text-pink-600",
                   ].join(" ")}
                 >
                   {item.label}
@@ -137,7 +143,7 @@ export default function AdminSidebar() {
           <button
             type="button"
             onClick={handleLogout}
-            className="mt-4 w-full rounded-2xl bg-red-500/90 px-4 py-3 text-sm font-bold text-white hover:bg-red-600"
+            className="mt-4 w-full rounded-2xl bg-red-500 px-4 py-3 text-sm font-bold text-white shadow-sm hover:bg-red-600"
           >
             登出
           </button>
